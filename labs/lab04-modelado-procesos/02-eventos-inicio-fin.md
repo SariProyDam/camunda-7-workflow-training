@@ -21,33 +21,13 @@ El motor Camunda inicia el proceso desde el **Start Event** y lo finaliza cuando
 
 # Abrir el modelo del proceso
 
-Abrir el archivo creado en el paso anterior.
-
-En Camunda Modeler seleccionar:
-
-```
-File → Open File
-```
-
-Abrir:
-
-```
-model/approval-process.bpmn
-```
-
-Se mostrará el diagrama BPMN.
+Abre el archivo del paso anterior. En **Camunda Modeler**: menú **File** (arriba) → **Open** (o **Open File**). Navega hasta la carpeta **model** del repositorio y selecciona **approval-process.bpmn**. Se abrirá el diagrama. (También puedes abrirlo desde VS Code: en el explorador, **model/approval-process.bpmn**, y si quieres editarlo en Modeler, abre ese archivo con la aplicación Camunda Modeler.)
 
 ---
 
 # Añadir evento de inicio
 
-En el panel de herramientas de la izquierda seleccionar:
-
-```
-Start Event
-```
-
-Arrastrar el elemento al diagrama.
+En la **paleta de la izquierda** (panel de herramientas) busca **Start Event** (círculo simple). **Arrástralo** al canvas y suéltalo donde quieras que empiece el flujo.
 
 Asignar el nombre:
 
@@ -61,13 +41,7 @@ Este evento representa el punto donde el proceso comienza.
 
 # Añadir evento de fin
 
-Seleccionar el elemento:
-
-```
-End Event
-```
-
-Arrastrarlo al diagrama.
+En la **paleta de la izquierda** busca **End Event** (círculo con borde grueso). Arrástralo al diagrama y colócalo donde deba terminar el proceso.
 
 Asignar el nombre:
 
@@ -81,15 +55,7 @@ Este evento representa el final del proceso.
 
 # Conectar los eventos
 
-Crear un flujo entre los eventos.
-
-Seleccionar el **Start Event** y utilizar la herramienta de conexión.
-
-Conectar:
-
-```
-Inicio → Fin
-```
+En la **paleta** selecciona **Sequence Flow** (la flecha/conector). Haz **clic** en el Start Event (Inicio) y **arrastra** hasta el End Event (Fin). O haz clic en el primero y luego en el segundo si tu versión lo permite. Debe quedar una flecha: **Inicio → Fin**.
 
 Esto crea el flujo mínimo de un proceso BPMN.
 

@@ -28,7 +28,7 @@ Por lo tanto, para que el motor pueda ejecutar el proceso es necesario copiar el
 
 # Copiar el modelo BPMN al backend
 
-Desde la raíz del proyecto ejecutar:
+Abre una **terminal**. Desde la **raíz del repositorio** (donde están **labs**, **backend** y **model**) ejecuta:
 
 ```bash
 cp model/approval-process.bpmn backend/src/main/resources/processes/
@@ -54,13 +54,7 @@ approval-process.bpmn
 
 # Arrancar la aplicación
 
-Ir al directorio del backend:
-
-```bash
-cd backend
-```
-
-Arrancar la aplicación:
+En la terminal, desde la raíz del repo: `cd backend`. Luego arranca la aplicación:
 
 ```bash
 mvn spring-boot:run
@@ -74,19 +68,7 @@ Si encuentra modelos BPMN, los desplegará automáticamente.
 
 # Verificar el despliegue en Cockpit
 
-Abrir el navegador y acceder a:
-
-```
-http://localhost:8081/camunda
-```
-
-Entrar en **Cockpit**.
-
-Ir a la sección:
-
-```
-Processes
-```
+Abre el **navegador** y ve a **http://localhost:8081/camunda** (o el puerto que use tu aplicación; lo ves en la terminal al arrancar). Inicia sesión si lo pide. Dentro de la interfaz de Camunda, en el **menú o la barra lateral** haz clic en **Cockpit** (o en **Processes** si ya estás en Cockpit).
 
 Debería aparecer el proceso:
 
@@ -98,9 +80,7 @@ approval-process
 
 # Explorar el proceso desplegado
 
-Seleccionar el proceso en Cockpit.
-
-Camunda mostrará:
+Haz **clic** en el proceso **approval-process** en la lista. Camunda mostrará para ese proceso:
 
 * el diagrama BPMN
 * las estadísticas del proceso

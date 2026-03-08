@@ -23,47 +23,19 @@ En este ejercicio añadiremos una **Service Task** al proceso.
 
 # Abrir el modelo del proceso
 
-Abrir el archivo:
-
-```
-model/approval-process.bpmn
-```
-
-Utilizar **Camunda Modeler** para editar el diagrama.
+Abre **model/approval-process.bpmn** en **Camunda Modeler** (File → Open y navega a la carpeta model del repo) o ábrelo desde el explorador de VS Code si lo editas ahí.
 
 ---
 
 # Insertar una Service Task
 
-Actualmente el proceso tiene este flujo:
-
-```
-Inicio → Fin
-```
-
-Modificar el proceso para incluir una tarea intermedia.
-
-Seleccionar el elemento:
-
-```
-Task
-```
-
-Arrastrarlo entre el evento de inicio y el evento de fin.
+El proceso tiene ahora **Inicio → Fin**. Vamos a meter una tarea en medio. En la **paleta de la izquierda** toma **Task** (rectángulo con bordes redondeados) y **arrástrala** al canvas entre el evento de inicio y el de fin. Conecta con **Sequence Flow**: Inicio → Task → Fin.
 
 ---
 
 # Convertir la tarea en Service Task
 
-Seleccionar la tarea creada.
-
-En el menú contextual elegir:
-
-```
-Service Task
-```
-
-Esto indica que la tarea será ejecutada automáticamente por el sistema.
+**Haz clic** en la tarea que acabas de crear. En el **panel de propiedades a la derecha** (o en un menú contextual al hacer clic derecho sobre la tarea) busca el **tipo de tarea**. Cámbialo a **Service Task** (en algunas versiones aparece como icono o en una lista desplegable "Task type"). Así la tarea será ejecutada automáticamente por el sistema.
 
 ---
 

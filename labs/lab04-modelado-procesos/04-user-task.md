@@ -22,45 +22,19 @@ Estas tareas se gestionan desde la aplicación **Camunda Tasklist**.
 
 # Abrir el modelo del proceso
 
-Abrir el archivo:
-
-```
-model/approval-process.bpmn
-```
-
-Editar el modelo utilizando **Camunda Modeler**.
+Abre **model/approval-process.bpmn** en **Camunda Modeler** (File → Open, carpeta model del repo).
 
 ---
 
 # Añadir una nueva tarea
 
-Actualmente el proceso tiene el siguiente flujo:
-
-```
-Inicio → Validar solicitud → Fin
-```
-
-Vamos a añadir una tarea humana antes del final del proceso.
-
-Seleccionar el elemento:
-
-```
-Task
-```
-
-Arrastrarlo entre la tarea **Validar solicitud** y el evento **Fin**.
+El flujo actual es **Inicio → Validar solicitud → Fin**. Añade una tarea humana antes del fin: en la **paleta de la izquierda** toma **Task** y **arrástrala** entre **Validar solicitud** y **Fin**. Conecta con **Sequence Flow** para que quede: Validar solicitud → nueva tarea → Fin.
 
 ---
 
 # Convertir la tarea en User Task
 
-Seleccionar la tarea recién creada.
-
-En el menú contextual seleccionar:
-
-```
-User Task
-```
+**Haz clic** en la tarea que acabas de añadir. En el **panel de propiedades a la derecha** (o clic derecho → tipo de tarea) cambia el tipo a **User Task**. Así la tarea será atendida por una persona desde Tasklist.
 
 ---
 
