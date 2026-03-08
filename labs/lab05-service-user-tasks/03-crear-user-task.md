@@ -32,47 +32,21 @@ Para que la tarea pueda aparecer correctamente en Tasklist es necesario configur
 
 # Abrir el modelo BPMN
 
-Abrir el archivo:
-
-```id="8s0c4q"
-model/approval-process.bpmn
-```
-
-Editar el modelo con **Camunda Modeler**.
+Abre **model/approval-process.bpmn** en **Camunda Modeler** (File → Open, carpeta model del repo).
 
 ---
 
 # Seleccionar la User Task
 
-Seleccionar la tarea:
-
-```id="n1x0lq"
-Aprobar solicitud
-```
+En el diagrama, **haz clic** en la tarea **Aprobar solicitud**. En el **panel de propiedades a la derecha** verás las opciones de la User Task.
 
 ---
 
 # Configurar el asignatario
 
-En el panel de propiedades buscar la sección:
+En el panel de propiedades busca la sección **Assignment** (o "Asignación"). Ahí está el campo **Assignee** (asignatario). Escribe: **demo**.
 
-```id="0a3x4e"
-Assignment
-```
-
-Configurar el campo:
-
-```id="4o3m1q"
-Assignee
-```
-
-Introducir el valor:
-
-```id="r5a9h2"
-demo
-```
-
-Esto indica que la tarea será asignada al usuario **demo**.
+Así la tarea se asignará al usuario **demo** (debe existir en Camunda; si usas demo/demo en application.properties, ese usuario suele estar creado).
 
 ---
 
@@ -98,13 +72,7 @@ cp model/approval-process.bpmn backend/src/main/resources/processes/
 
 # Reiniciar la aplicación
 
-Ir al directorio del backend:
-
-```bash id="a6c9pn"
-cd backend
-```
-
-Arrancar la aplicación:
+En la terminal, desde la raíz del repo: `cd backend`. Arranca la aplicación:
 
 ```bash id="w4n5lp"
 mvn spring-boot:run
@@ -125,33 +93,15 @@ En ese momento el motor creará una tarea para el usuario configurado.
 
 # Verificar en Tasklist
 
-Abrir en el navegador:
+Abre el **navegador** y ve a **http://localhost:8081/camunda/app/tasklist** (cambia 8081 por tu puerto si es otro). Inicia sesión con **demo** / **demo** (o el usuario que tengas configurado).
 
-```id="u3y8gx"
-http://localhost:8081/camunda/app/tasklist
-```
-
-Iniciar sesión con el usuario:
-
-```id="x5r2bc"
-demo
-```
-
-Debería aparecer la tarea:
-
-```id="t4p8zn"
-Aprobar solicitud
-```
+En la **lista de tareas** debería aparecer **Aprobar solicitud** una vez que hayas iniciado una instancia del proceso.
 
 ---
 
 # Completar la tarea
 
-Seleccionar la tarea y presionar:
-
-```id="q9d6tm"
-Complete
-```
+Haz **clic** en la tarea en la lista. Se abrirá el detalle. Pulsa el botón **Complete** (o "Completar") para cerrar la tarea y que el proceso continúe hasta el fin.
 
 Esto permitirá que el proceso continúe hasta el evento de fin.
 

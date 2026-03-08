@@ -34,51 +34,25 @@ Candidate Groups
 
 # Abrir el modelo BPMN
 
-Abrir el archivo:
-
-```id="s4j9dz"
-model/approval-process.bpmn
-```
-
-Editar el modelo con **Camunda Modeler**.
+Abre **model/approval-process.bpmn** en **Camunda Modeler** (File → Open, carpeta model del repo).
 
 ---
 
 # Seleccionar la User Task
 
-Seleccionar la tarea:
-
-```id="p7y6kl"
-Aprobar solicitud
-```
+En el diagrama, **haz clic** en la tarea **Aprobar solicitud**. En el **panel de propiedades a la derecha** se mostrarán sus opciones.
 
 ---
 
 # Eliminar el assignee
 
-En el panel de propiedades localizar el campo:
-
-```id="u8w4je"
-Assignee
-```
-
-Eliminar el valor configurado anteriormente.
+En el panel de propiedades, en la sección **Assignment**, localiza el campo **Assignee**. Borra el valor que tenga (por ejemplo "demo") y déjalo vacío.
 
 ---
 
 # Configurar el grupo candidato
 
-En la sección **Assignment** localizar el campo:
-
-```id="h9t1om"
-Candidate Groups
-```
-
-Introducir el valor:
-
-```id="b3r6vx"
-managers
-```
+En la misma sección **Assignment** busca el campo **Candidate Groups** (grupos candidatos). Introduce: **managers** (o el nombre del grupo que tengas creado en Camunda).
 
 Esto indica que cualquier usuario perteneciente al grupo **managers** podrá reclamar o completar la tarea.
 
@@ -106,11 +80,7 @@ cp model/approval-process.bpmn backend/src/main/resources/processes/
 
 # Reiniciar la aplicación
 
-Ir al directorio del backend:
-
-```bash id="c6d3kp"
-cd backend
-```
+En la **terminal**, desde la **raíz del repositorio** ejecuta `cd backend`. Luego:
 
 Arrancar la aplicación:
 

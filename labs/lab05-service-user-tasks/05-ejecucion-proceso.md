@@ -23,13 +23,7 @@ Ahora vamos a ejecutar el proceso completo para comprobar cómo el motor Camunda
 
 # Arrancar la aplicación
 
-Ir al directorio del backend:
-
-```bash
-cd backend
-```
-
-Arrancar la aplicación:
+Abre una **terminal**. Desde la **raíz del repositorio** ejecuta `cd backend` y luego arranca la aplicación:
 
 ```bash
 mvn spring-boot:run
@@ -73,15 +67,9 @@ Esto indica que el motor ha ejecutado la **Service Task**.
 
 # Verificar la User Task en Tasklist
 
-Abrir el navegador y acceder a:
+Abre el **navegador** y ve a **http://localhost:8081/camunda/app/tasklist** (usa el puerto que indique tu aplicación). Inicia sesión con el usuario que tenga la tarea asignada (por ejemplo **demo**).
 
-```
-http://localhost:8081/camunda/app/tasklist
-```
-
-Iniciar sesión con el usuario correspondiente.
-
-Debería aparecer la tarea:
+En la lista de tareas debería aparecer:
 
 ```
 Aprobar solicitud

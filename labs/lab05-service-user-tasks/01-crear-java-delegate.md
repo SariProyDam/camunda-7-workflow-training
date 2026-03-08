@@ -28,33 +28,13 @@ Cuando el proceso alcance esta tarea, el motor ejecutará el código de esa clas
 
 # Crear el paquete de delegates
 
-Ir al directorio del código Java:
-
-```
-backend/src/main/java
-```
-
-Crear el siguiente paquete:
-
-```
-com.example.workflow.delegate
-```
+En el **explorador de archivos** de VS Code, entra en **backend** → **src** → **main** → **java**. Ahí verás los paquetes existentes (por ejemplo `com.example.workflow`). **Clic derecho** en el paquete raíz (por ejemplo `workflow`) → **New Folder** y crea **delegate** (o si tu proyecto usa otra estructura, crea la carpeta que corresponda al paquete `com.example.workflow.delegate`: por ejemplo las carpetas `com/example/workflow/delegate` dentro de **java**).
 
 ---
 
 # Crear la clase Java
 
-Crear el archivo:
-
-```
-ValidarSolicitudDelegate.java
-```
-
-Ruta completa:
-
-```
-backend/src/main/java/com/example/workflow/delegate/ValidarSolicitudDelegate.java
-```
+Dentro de la carpeta **delegate** (o **workflow/delegate** según tu estructura), **clic derecho** → **New File** y crea **ValidarSolicitudDelegate.java**. La ruta debe quedar algo como **backend/src/main/java/com/example/workflow/delegate/ValidarSolicitudDelegate.java** (ajusta `com.example.workflow` al paquete real de tu proyecto).
 
 ---
 
@@ -105,11 +85,7 @@ En este ejemplo la lógica es simple y solo imprime un mensaje en consola.
 
 # Compilar el proyecto
 
-Ir al directorio del backend:
-
-```bash
-cd backend
-```
+Abre una **terminal**. Desde la **raíz del repositorio** ejecuta `cd backend`. Luego:
 
 Compilar el proyecto:
 

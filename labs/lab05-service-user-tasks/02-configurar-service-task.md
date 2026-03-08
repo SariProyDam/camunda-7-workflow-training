@@ -32,41 +32,25 @@ Delegate Expression
 
 # Abrir el modelo BPMN
 
-Abrir el archivo:
-
-```
-model/approval-process.bpmn
-```
-
-Editar el modelo usando **Camunda Modeler**.
+Abre **model/approval-process.bpmn** en **Camunda Modeler** (File → Open, carpeta model del repo).
 
 ---
 
 # Seleccionar la Service Task
 
-Seleccionar la tarea llamada:
-
-```
-Validar solicitud
-```
-
-En el panel derecho aparecerán las propiedades del elemento.
+En el diagrama, **haz clic** en la tarea **Validar solicitud**. En el **panel de propiedades a la derecha** (si no lo ves, Window → Show Properties) se mostrarán las opciones de esa tarea.
 
 ---
 
 # Configurar el tipo de implementación
 
-En la sección **Implementation** seleccionar:
-
-```
-Delegate Expression
-```
+En el panel de propiedades busca la sección **Implementation** (o "Implementación"). En el tipo de implementación elige **Delegate Expression**.
 
 ---
 
 # Configurar la expresión del delegate
 
-Introducir la siguiente expresión:
+En el campo que aparezca para la expresión (suele ser "Delegate Expression" o similar), escribe:
 
 ```
 ${validarSolicitudDelegate}
@@ -100,7 +84,7 @@ model/approval-process.bpmn
 
 # Copiar el modelo al backend
 
-Copiar el modelo al directorio donde Camunda despliega procesos:
+Desde la **raíz del repositorio** (donde están **labs**, **backend** y **model**) ejecuta en la terminal:
 
 ```bash
 cp model/approval-process.bpmn backend/src/main/resources/processes/
@@ -110,13 +94,7 @@ cp model/approval-process.bpmn backend/src/main/resources/processes/
 
 # Ejecutar la aplicación
 
-Ir al directorio del backend:
-
-```bash
-cd backend
-```
-
-Ejecutar la aplicación:
+En la terminal, `cd backend` (desde la raíz del repo) y luego ejecuta:
 
 ```bash
 mvn spring-boot:run
