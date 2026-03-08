@@ -106,11 +106,7 @@ cp model/approval-process.bpmn backend/src/main/resources/processes/
 
 # Ejecutar la aplicación
 
-Ir al directorio del backend:
-
-```bash
-cd backend
-```
+En la **terminal**, desde la **raíz del repositorio** ejecuta `cd backend`. Luego:
 
 Arrancar la aplicación:
 

@@ -23,13 +23,7 @@ Esto permite enviar **datos de negocio al proceso** desde el inicio.
 
 # Abrir la clase que inicia el proceso
 
-Abrir el archivo:
-
-```
-backend/src/main/java/com/example/workflow/WorkflowAppApplication.java
-```
-
-Buscar el código donde se inicia el proceso:
+En el **explorador** de VS Code entra en **backend** → **src** → **main** → **java** y abre la clase principal de la aplicación (por ejemplo **WorkflowAppApplication.java**; usa **Ctrl+P** y escribe el nombre si no la ves). Busca el código donde se inicia el proceso:
 
 ```java
 runtimeService.startProcessInstanceByKey("approval-process");
@@ -90,11 +84,7 @@ public CommandLineRunner startProcess(RuntimeService runtimeService) {
 
 # Compilar el proyecto
 
-Ir al backend:
-
-```bash
-cd backend
-```
+En la **terminal**, desde la **raíz del repositorio** ejecuta `cd backend`. Luego:
 
 Compilar el proyecto:
 
@@ -126,15 +116,7 @@ http://localhost:8081/camunda
 
 Ir a **Cockpit**.
 
-Abrir el proceso:
-
-```
-approval-process
-```
-
-Seleccionar una instancia del proceso.
-
-Ir a la sección:
+En Cockpit, en la lista de procesos **haz clic** en **approval-process**. Abre una instancia de la lista (si hay varias). En la vista de detalle, en el **menú o las pestañas** entra en la sección:
 
 ```
 Variables

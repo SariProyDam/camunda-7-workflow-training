@@ -36,11 +36,7 @@ estadoSolicitud
 
 # Abrir el JavaDelegate
 
-Abrir la clase creada anteriormente:
-
-```
-backend/src/main/java/com/example/workflow/delegate/ValidarSolicitudDelegate.java
-```
+En el **explorador** de VS Code entra en **backend** → **src** → **main** → **java** y localiza la clase **ValidarSolicitudDelegate.java** (suele estar en un paquete **delegate** dentro de workflow). Ábrela. O usa **Ctrl+P** y escribe `ValidarSolicitudDelegate`.
 
 ---
 
@@ -89,11 +85,7 @@ Esta variable quedará disponible para el resto del proceso.
 
 # Compilar el proyecto
 
-Ir al directorio del backend:
-
-```bash id="s0u2s3"
-cd backend
-```
+Abre una **terminal**. Desde la **raíz del repositorio** ejecuta `cd backend` y luego:
 
 Compilar el proyecto:
 
@@ -125,15 +117,7 @@ http://localhost:8081/camunda
 
 Ir a **Cockpit**.
 
-Seleccionar el proceso:
-
-```
-approval-process
-```
-
-Abrir una instancia del proceso.
-
-Ir a la sección:
+En la lista, **haz clic** en el proceso **approval-process**. Abre una de las instancias (si hay varias). En el **menú o las pestañas** de la vista de detalle, entra en la sección:
 
 ```
 Variables
